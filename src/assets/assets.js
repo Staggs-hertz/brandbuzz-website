@@ -13,6 +13,8 @@ import scroll_icon from "./scroll_icon.svg";
 import monitor_icon from "./monitor_icon.svg";
 import search_icon from "./search_icon.svg";
 import dots_img from "./dots_image.png";
+import sun_icon from "./sun_icon.svg";
+import moon_icon from "./moon_icon.svg";
 
 export const servicesIcons = {
   megaphone_icon,
@@ -36,6 +38,8 @@ const assets = {
   agency_img,
   solution_img,
   dots_img,
+  sun_icon,
+  moon_icon,
 };
 
 export const testimonialData = [

@@ -15,25 +15,6 @@ This project brings to life the “BrandBuzz” design concept — a sleek, 3D-s
 
 ---
 
-## 🏗️ Project Structure
-
-BrandBuzz/
-├── public/
-│ └── favicon.ico
-├── src/
-│ ├── assets/ # Images, icons, and illustrations
-│ ├── components/ # Reusable UI components (Navbar, Footer, etc.)
-│ ├── App.jsx
-│ ├── main.jsx
-│ └── index.css
-├── .gitignore
-├── index.html
-├── package.json
-├── vite.config.js
-└── README.md
-
----
-
 ## 🛠️ Installation & Setup
 
 1. **Clone the repository**
