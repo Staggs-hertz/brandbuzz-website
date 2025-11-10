@@ -5,7 +5,7 @@ import twitter_icon from "./twitter_icon.svg";
 import instagram_icon from "./instagram_icon.svg";
 import hero_img from "./hero_image.png";
 import solution_img from "./solution_image.png";
-import agency_img from "./agency_image.png";
+import agency_img from "./agency.png";
 import full_star from "./star_full_icon.svg";
 import empty_star from "./star_gray_icon.svg";
 import megaphone_icon from "./megaphone_icon.svg";
@@ -15,6 +15,9 @@ import search_icon from "./search_icon.svg";
 import dots_img from "./dots_image.png";
 import sun_icon from "./sun_icon.svg";
 import moon_icon from "./moon_icon.svg";
+import close_icon from "./close_icon.svg";
+import menu_icon from "./menu_icon.svg";
+import menu_icon_dark from "./menu_icon_dark.svg";
 
 export const servicesIcons = {
   megaphone_icon,
@@ -40,6 +43,9 @@ const assets = {
   dots_img,
   sun_icon,
   moon_icon,
+  menu_icon,
+  menu_icon_dark,
+  close_icon,
 };
 
 export const testimonialData = [
