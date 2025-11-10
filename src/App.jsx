@@ -6,7 +6,7 @@ const App = () => {
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   );
   return (
-    <div>
+    <div className="dark:bg-black">
       <Navbar theme={theme} setTheme={setTheme} />
     </div>
   );

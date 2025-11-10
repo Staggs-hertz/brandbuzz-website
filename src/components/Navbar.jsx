@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import assets from "../assets/assets";
+import ThemeToggleBtn from "./ThemeToggleBtn";
 
-const Navbar = () => {
+const Navbar = ({ theme, setTheme }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <div className="flex justify-between items-center px-4 sm:px-12 lg:px-24 xl:px-40 py-4 sticky top-0 z-20 backdrop-blur-xl font-medium bg-white/50 dark:bg-gray-900/70">
       <a href="#">
-        <img src={assets.logo} className="w-32 sm:w-40" alt="" />
+        <img
+          src={theme === "light" ? assets.logo : assets.logo_dark}
+          className="w-32 sm:w-40"
+          alt=""
+        />
       </a>
 
       <div
@@ -75,11 +80,11 @@ const Navbar = () => {
       </div>
 
       <div className="flex items-center gap-2 sm:gap-4">
-        <img src={assets.moon_icon} alt="" />
+        <ThemeToggleBtn theme={theme} setTheme={setTheme} />
         <div className="flex gap-2">
           <a
             href="#"
-            className="text-white text-sm max-sm:hidden bg-primary py-3 px-6 rounded hover:scale-105 transition-all shadow-gray-300 shadow-lg"
+            className="text-white text-sm max-sm:hidden bg-primary py-3 px-6 rounded hover:scale-105 transition-all shadow-lg"
           >
             Sign Up
           </a>
@@ -92,7 +97,7 @@ const Navbar = () => {
         </div>
 
         <img
-          src={assets.menu_icon}
+          src={theme === "light" ? assets.menu_icon : assets.menu_icon_dark}
           className="sm:hidden w-8"
           onClick={() => setSidebarOpen(true)}
           alt=""
