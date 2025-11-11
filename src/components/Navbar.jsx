@@ -17,13 +17,13 @@ const Navbar = ({ theme, setTheme }) => {
 
       <div
         className={`text-gray-700 dark:text-white sm:text-sm flex gap-5 ${
-          sidebarOpen ? "max-sm:w-60 max-sm:pl-8" : "max-sm:w-0 overflow-hidden"
-        } max-sm:bg-primary max-sm:h-full max-sm:min-h-screen max-sm:fixed top-0 right-0 max-sm:flex-col max-sm:pt-20 max-sm:text-white transition-all`}
+          sidebarOpen ? "max-sm:w-60 max-sm:pl-3" : "max-sm:w-0 overflow-hidden"
+        } max-sm:bg-primary max-sm:h-full max-sm:min-h-screen max-sm:fixed top-0 right-0 max-sm:flex-col max-sm:pt-20 max-sm:text-white transition-all text-center`}
       >
-        <div className="flex gap-2 sm:hidden">
+        <div className="flex gap-2 sm:hidden pl-2">
           <a
             href="#"
-            className="text-white text-sm bg-primary py-3 px-6 rounded hover:scale-105 transition-all shadow-lg"
+            className="text-white text-sm bg-primary py-3 px-6 rounded hover:scale-105 transition-all shadow-lg border border-white"
             onClick={() => setSidebarOpen(false)}
           >
             Sign Up
@@ -84,13 +84,13 @@ const Navbar = ({ theme, setTheme }) => {
         <div className="flex gap-2">
           <a
             href="#"
-            className="text-white text-sm max-sm:hidden bg-primary py-3 px-6 rounded hover:scale-105 transition-all shadow-lg"
+            className="text-white text-sm max-sm:hidden bg-primary py-3 px-6 max-md:px-3 max-md:text-[12px] rounded hover:scale-105 transition-all shadow-lg"
           >
             Sign Up
           </a>
           <a
             href="#"
-            className="text-gray-700 text-sm max-sm:hidden bg-white py-3 px-6 rounded hover:scale-105 transition-all shadow-lg"
+            className="text-gray-700 text-sm max-sm:hidden bg-white py-3 px-6 max-md:px-3 max-md:text-[12px] rounded hover:scale-105 transition-all shadow-lg"
           >
             Log In
           </a>
