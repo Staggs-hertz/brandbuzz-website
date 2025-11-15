@@ -84,13 +84,13 @@ const Navbar = ({ theme, setTheme }) => {
         <div className="flex gap-2">
           <a
             href="#"
-            className="text-white text-sm max-sm:hidden bg-primary py-3 px-6 max-md:px-3 max-md:text-[12px] rounded hover:scale-105 transition-all shadow-lg"
+            className="text-white text-sm max-sm:hidden bg-primary py-3 px-6 max-md:px-3 max-md:text-[12px] rounded hover:scale-105 transition-all shadow-lg flex-wrap"
           >
             Sign Up
           </a>
           <a
             href="#"
-            className="text-gray-700 text-sm max-sm:hidden bg-white py-3 px-6 max-md:px-3 max-md:text-[12px] rounded hover:scale-105 transition-all shadow-lg"
+            className="text-gray-700 text-sm max-sm:hidden bg-white py-3 px-6 max-md:px-3 max-md:text-[12px] rounded hover:scale-105 transition-all shadow-lg flex-wrap"
           >
             Log In
           </a>

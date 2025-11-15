@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
+import SolutionSteps from "./components/SolutionSteps";
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -12,6 +13,7 @@ const App = () => {
       <Navbar theme={theme} setTheme={setTheme} />
       <Hero />
       <Services />
+      <SolutionSteps />
     </div>
   );
 };
