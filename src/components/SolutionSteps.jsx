@@ -6,7 +6,7 @@ const SolutionSteps = () => {
   return (
     <div className="px-4 sm:px-12 lg:px-24 xl:px-40 flex justify-between items-center bg-orange-200/50 dark:bg-primary/20 max-md:flex-col">
       {/* Below is the left hand side of the section */}
-      <div>
+      <div className="max-md:w-10/12 mx-auto">
         <img src={assets.solution_img} className="w-11/12 m-auto" alt="" />
       </div>
 

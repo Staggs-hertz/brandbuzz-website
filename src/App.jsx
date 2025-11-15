@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
 import SolutionSteps from "./components/SolutionSteps";
+import OurAgency from "./components/OurAgency";
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -14,6 +15,7 @@ const App = () => {
       <Hero />
       <Services />
       <SolutionSteps />
+      <OurAgency />
     </div>
   );
 };
