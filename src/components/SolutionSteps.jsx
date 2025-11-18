@@ -7,16 +7,16 @@ const SolutionSteps = () => {
     <div className="px-4 sm:px-12 lg:px-24 xl:px-40 flex justify-between items-center bg-orange-200/50 dark:bg-primary/20 max-md:flex-col">
       {/* Below is the left hand side of the section */}
       <div className="max-md:w-10/12 mx-auto">
-        <img src={assets.solution_img} className="w-11/12 m-auto" alt="" />
+        <img src={assets.solution_img} className="w-10/12 m-auto" alt="" />
       </div>
 
       {/* Below is the right hand side of the section */}
       <div className="py-5">
         <div className="pb-7">
-          <h2 className="font-bold text-4xl sm:text-5xl text-gray-700 dark:text-white">
+          <h2 className="font-bold text-3xl sm:text-4xl text-gray-700 dark:text-white">
             Simple <span className="text-primary">Solutions!</span>
           </h2>
-          <p className="mt-5 ml-0 text-gray-500  dark:text-gray-300 mx-auto text-xl md:w-3/4">
+          <p className="mt-5 ml-0 text-gray-500 dark:text-gray-300 mx-auto text-md md:w-3/4">
             We understanding that no two businesses are alike. That's why we
             take the time to understand.
           </p>

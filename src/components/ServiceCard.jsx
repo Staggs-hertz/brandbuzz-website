@@ -7,14 +7,16 @@ const ServiceCard = ({ service }) => {
         <img
           src={service.icon}
           alt=""
-          className="w-20 p-5 rounded rounded-br-4xl"
+          className="w-18 p-5 rounded rounded-br-4xl"
           style={{ backgroundColor: service.color }}
         />
       </div>
-      <h2 className="font-semibold my-5 text-gray-800 dark:text-white text-2xl">
+      <h2 className="font-semibold my-5 text-gray-800 dark:text-white text-xl">
         {service.title}
       </h2>
-      <p className="text-gray-500 dark:text-gray-400">{service.description}</p>
+      <p className="text-gray-500 dark:text-gray-400 text-sm">
+        {service.description}
+      </p>
     </div>
   );
 };

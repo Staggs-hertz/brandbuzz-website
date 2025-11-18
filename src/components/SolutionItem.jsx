@@ -7,8 +7,8 @@ const SolutionItem = ({ title, desc, stepNumber }) => {
         <span className="text-white text-2xl">{stepNumber}</span>
       </div>
       <div className="">
-        <h3 className="text-2xl font-semibold dark:text-white">{title}</h3>
-        <p className="text-gray-500 dark:text-gray-300">{desc}</p>
+        <h3 className="text-xl font-semibold dark:text-white">{title}</h3>
+        <p className="text-gray-500 dark:text-gray-300 text-sm">{desc}</p>
       </div>
     </div>
   );

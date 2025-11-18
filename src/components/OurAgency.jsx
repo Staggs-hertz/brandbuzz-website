@@ -6,10 +6,10 @@ const OurAgency = () => {
     <div className="px-4 sm:px-12 lg:px-24 xl:px-40 py-11 flex items-center justify-between max-md:flex-col">
       {/* Below is the left hand side of the section */}
       <div className="space-y-8">
-        <h2 className="font-bold text-4xl sm:text-5xl text-gray-700 dark:text-white">
+        <h2 className="font-bold text-3xl sm:text-4xl text-gray-700 dark:text-white">
           Our <span className="text-primary">Agency</span>
         </h2>
-        <p className="text-gray-500 dark:text-gray-300 mx-auto text-xl md:w-9/12 ml-0">
+        <p className="text-gray-500 dark:text-gray-300 mx-auto text-md md:w-9/12 ml-0">
           We believe in the power of data. Our analytics-driven approach allows
           us to make informed. <br />
           Decisions and optimize your marketing efforts for maximum ROI. Let's
