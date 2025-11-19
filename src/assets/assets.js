@@ -56,6 +56,7 @@ export const testimonialData = [
       "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200",
     remark:
       "We have worked with multiple agencies, but BrandBuzz really understands brand storytelling on a deeper level.",
+    rate: 5,
   },
   {
     name: "Noah Gallagher",
@@ -64,6 +65,7 @@ export const testimonialData = [
       "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200",
     remark:
       "The team blended creativity and strategy perfectly. Our campaign results were beyond expectations.",
+    rate: 5,
   },
 
   {
@@ -73,6 +75,7 @@ export const testimonialData = [
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&h=200&auto=format&fit=crop",
     remark:
       "Professional, friendly, and deeply passionate about their craft. I couldn’t have asked for a better team.",
+    rate: 4,
   },
   {
     name: "Ashley Bennett",
@@ -80,6 +83,7 @@ export const testimonialData = [
     image: "https://randomuser.me/api/portraits/women/10.jpg",
     remark:
       "They didn’t just redesign our website — they elevated our entire brand identity. Highly recommend BrandBuzz!",
+    rate: 5,
   },
   {
     name: "Sofia Turner",
@@ -87,6 +91,7 @@ export const testimonialData = [
     image: "https://randomuser.me/api/portraits/women/11.jpg",
     remark:
       "BrandBuzz transformed our online presence! The new landing page doubled our conversion rate within two weeks.",
+    rate: 4,
   },
   {
     name: "Liam Carter",
@@ -94,6 +99,7 @@ export const testimonialData = [
     image: "https://randomuser.me/api/portraits/men/9.jpg",
     remark:
       "Their workflow is clear, modern, and transparent. BrandBuzz made collaboration feel effortless.",
+    rate: 4,
   },
   {
     name: "Megan Brooks",
@@ -101,6 +107,7 @@ export const testimonialData = [
     image: "https://randomuser.me/api/portraits/women/12.jpg",
     remark:
       "What stood out most was their attention to detail. Our brand feels more alive and consistent than ever.",
+    rate: 5,
   },
   {
     name: "Amber Foster",
@@ -108,6 +115,7 @@ export const testimonialData = [
     image: "https://randomuser.me/api/portraits/women/14.jpg",
     remark:
       "Their creative energy is unmatched. From design to delivery, everything was smooth and well-executed.",
+    rate: 5,
   },
 ];
 
