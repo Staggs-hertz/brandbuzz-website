@@ -49,13 +49,13 @@ const SolutionSteps = () => {
         <div className="flex gap-7 items-center mt-7 ">
           <a
             href="#"
-            className="text-white text-md bg-primary border border-primary py-3 px-10 rounded hover:scale-105 transition-all shadow-lg flex-wrap"
+            className="text-white text-md bg-primary border border-primary py-3 px-8 sm:px-11 rounded hover:scale-105 transition-all shadow-lg flex-wrap"
           >
             Get Started
           </a>
           <a
             href="#"
-            className="bg-transparent dark:bg-white/80 text-primary border border-primary py-3 px-10 rounded hover:scale-105 transition-all text-sd shadow-lg flex-wrap"
+            className="bg-transparent dark:bg-white/80 text-primary border border-primary py-3 px-8 sm:px-11  rounded hover:scale-105 transition-all text-sd shadow-lg flex-wrap"
           >
             Read More
           </a>
