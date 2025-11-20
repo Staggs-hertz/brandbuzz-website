@@ -5,6 +5,7 @@ import Services from "./components/Services";
 import SolutionSteps from "./components/SolutionSteps";
 import OurAgency from "./components/OurAgency";
 import Testimonials from "./components/Testimonials";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -18,6 +19,7 @@ const App = () => {
       <SolutionSteps />
       <OurAgency />
       <Testimonials />
+      <Footer theme={theme} setTheme={setTheme} />
     </div>
   );
 };
