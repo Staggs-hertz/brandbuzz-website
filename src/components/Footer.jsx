@@ -1,9 +1,10 @@
 import React from "react";
 import assets from "../assets/assets";
+import FooterArc from "./FooterArc";
 
 const Footer = ({ theme }) => {
   return (
-    <div className="px-4 sm:px-12 lg:px-24 xl:px-40 py-13 bg-orange-200/50 dark:bg-primary/20 grid sm:grid-cols-2 md:grid-cols-4 max-sm:text-center relative">
+    <div className="px-4 sm:px-12 lg:px-24 xl:px-40 pt-24 pb-30 bg-orange-200/50 dark:bg-primary/20 grid sm:grid-cols-2 md:grid-cols-4 max-sm:text-center relative">
       {/* Below is the orange box above the footer */}
       <div className="absolute -top-9 left-1/2 -translate-x-1/2 bg-primary px-10 max-sm:px-4 py-4 flex items-center justify-between max-sm:w-11/12 sm:w-10/12 md:w-9/12 rounded">
         <h3 className="text-white text-xl max-sm:text-lg">
@@ -72,6 +73,9 @@ const Footer = ({ theme }) => {
           <li>Affliates</li>
         </ul>
       </div>
+
+      {/* Below is the orange copyright arc at the bottom */}
+      <FooterArc />
     </div>
   );
 };
