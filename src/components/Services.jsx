@@ -1,6 +1,7 @@
 import React from "react";
 import { servicesIcons } from "../assets/assets";
 import ServiceCard from "./ServiceCard";
+import { motion } from "motion/react";
 
 const Services = () => {
   const servicesData = [
@@ -35,16 +36,34 @@ const Services = () => {
   ];
 
   return (
-    <div className="px-4 sm:px-12 lg:px-24 xl:px-40 py-11">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ staggerChildren: 0.2 }}
+      className="px-4 sm:px-12 lg:px-24 xl:px-40 py-11"
+    >
       {/* Below is the title of the services section */}
       <div className="text-center">
-        <h2 className="font-bold text-3xl sm:text-4xl text-gray-700 dark:text-white">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="font-bold text-3xl sm:text-4xl text-gray-700 dark:text-white"
+        >
           We Provide The Best <span className="text-primary">Services</span>
-        </h2>
-        <p className="mt-5 text-gray-500  dark:text-gray-300 mx-auto text-md max-sm:w-5/6 sm:w-3/4 lg:w-1/3 ">
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mt-5 text-gray-500  dark:text-gray-300 mx-auto text-md max-sm:w-5/6 sm:w-3/4 lg:w-1/3 "
+        >
           Let us unleash the full potential of your business with our
           data-driven strategies
-        </p>
+        </motion.p>
       </div>
 
       {/* Below is a map function to display the service cards */}
@@ -53,7 +72,7 @@ const Services = () => {
           <ServiceCard key={index} service={service} index={index} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

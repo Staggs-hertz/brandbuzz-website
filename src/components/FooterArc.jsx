@@ -1,10 +1,16 @@
 import React from "react";
+import { motion } from "motion/react";
 
 const FooterArc = () => {
   let currentYear = new Date().getFullYear();
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.9, delay: 0.5 }}
+      viewport={{ once: true }}
+    >
       <svg
         className="absolute bottom-0 left-0 w-full"
         viewBox="0 0 1440 60"
@@ -26,7 +32,7 @@ const FooterArc = () => {
           All rights reserved {currentYear}
         </text>
       </svg>
-    </div>
+    </motion.div>
   );
 };
 

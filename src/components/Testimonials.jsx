@@ -3,6 +3,7 @@ import TestimonialCard from "./TestimonialCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 //lucide-react was installed to make use of the right and left navigation arrows
 import { testimonialData } from "../assets/assets";
+import { motion } from "motion/react";
 
 const Testimonials = () => {
   const scrollRef = useRef(null);
@@ -19,13 +20,25 @@ const Testimonials = () => {
       {/* <div className="text-center"> */}
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center">
-          <h2 className="font-bold text-3xl sm:text-4xl text-gray-700 dark:text-white">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="font-bold text-3xl sm:text-4xl text-gray-700 dark:text-white"
+          >
             What <span className="text-primary">Clients</span> Say!
-          </h2>
-          <p className="mt-5 text-gray-500 dark:text-gray-300 mx-auto text-md max-sm:w-5/6 sm:w-3/4 lg:w-1/3 ">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mt-5 text-gray-500 dark:text-gray-300 mx-auto text-md max-sm:w-5/6 sm:w-3/4 lg:w-1/3 "
+          >
             See how our digital marketing agency helped clients achieve their
             goals
-          </p>
+          </motion.p>
         </div>
 
         {/* The left and right buttons for navigation */}

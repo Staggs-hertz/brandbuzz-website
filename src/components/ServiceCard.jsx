@@ -1,8 +1,15 @@
 import React from "react";
+import { motion } from "motion/react";
 
-const ServiceCard = ({ service }) => {
+const ServiceCard = ({ index, service }) => {
   return (
-    <div className="relative pt-13 pb-5 px-5 rounded-lg border border-gray-200 dark:border-gray-700 shadow-xl shadow-gray-200 dark:shadow-white/10 dark:bg-gray-950 flex-1 hover:scale-105 transition-transform duration-300 cursor-pointer">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.2 }}
+      viewport={{ once: true }}
+      className="relative pt-13 pb-5 px-5 rounded-lg border border-gray-200 dark:border-gray-700 shadow-xl shadow-gray-200 dark:shadow-white/10 dark:bg-gray-950 flex-1 hover:scale-105 transition-transform duration-300 cursor-pointer"
+    >
       <div className="absolute w-20 top-0 left-0">
         <img
           src={service.icon}
@@ -17,7 +24,7 @@ const ServiceCard = ({ service }) => {
       <p className="text-gray-500 dark:text-gray-400 text-sm">
         {service.description}
       </p>
-    </div>
+    </motion.div>
   );
 };
 

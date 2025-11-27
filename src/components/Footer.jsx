@@ -1,12 +1,25 @@
 import React from "react";
 import assets from "../assets/assets";
 import FooterArc from "./FooterArc";
+import { motion } from "motion/react";
 
 const Footer = ({ theme }) => {
   return (
-    <div className="px-4 sm:px-12 lg:px-24 xl:px-40 pt-24 pb-30 bg-orange-200/50 dark:bg-primary/20 grid sm:grid-cols-2 md:grid-cols-4 max-sm:text-center relative">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.9 }}
+      viewport={{ once: true }}
+      className="px-4 sm:px-12 lg:px-24 xl:px-40 pt-24 pb-30 bg-orange-200/50 dark:bg-primary/20 grid sm:grid-cols-2 md:grid-cols-4 max-sm:text-center relative"
+    >
       {/* Below is the orange box above the footer */}
-      <div className="absolute -top-9 left-1/2 -translate-x-1/2 bg-primary px-10 max-sm:px-4 py-4 flex items-center justify-between max-sm:w-11/12 sm:w-10/12 md:w-9/12 rounded">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.9, delay: 0.5 }}
+        viewport={{ once: true }}
+        className="absolute -top-9 left-1/2 -translate-x-1/2 bg-primary px-10 max-sm:px-4 py-4 flex items-center justify-between max-sm:w-11/12 sm:w-10/12 md:w-9/12 rounded"
+      >
         <h3 className="text-white text-xl max-sm:text-lg">
           Ready to get started?
         </h3>
@@ -16,10 +29,16 @@ const Footer = ({ theme }) => {
         >
           Contact Us
         </a>
-      </div>
+      </motion.div>
 
       {/* Below is the first column */}
-      <div className="mb-5 flex flex-col max-sm:items-center">
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7, delay: 0.1 }}
+        viewport={{ once: true }}
+        className="mb-5 flex flex-col max-sm:items-center"
+      >
         <a href="#">
           <img
             src={theme === "light" ? assets.logo : assets.logo_dark}
@@ -32,10 +51,16 @@ const Footer = ({ theme }) => {
           <img src={assets.instagram_icon} className="size-9.5" alt="" />
           <img src={assets.twitter_icon} className="size-9.5" alt="" />
         </div>
-      </div>
+      </motion.div>
 
       {/* Below is the second column */}
-      <div className="mb-5">
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7, delay: 0.3 }}
+        viewport={{ once: true }}
+        className="mb-5"
+      >
         <p className="font-bold text-lg text-gray-800 dark:text-white my-2">
           Company
         </p>
@@ -45,10 +70,16 @@ const Footer = ({ theme }) => {
           <li>Careers</li>
           <li>Team</li>
         </ul>
-      </div>
+      </motion.div>
 
       {/* Below is the third column */}
-      <div className="mb-5">
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7, delay: 0.5 }}
+        viewport={{ once: true }}
+        className="mb-5"
+      >
         <p className="font-bold text-lg text-gray-800 dark:text-white my-2">
           Designs
         </p>
@@ -59,10 +90,16 @@ const Footer = ({ theme }) => {
           <li>Discover inspiration</li>
           <li>Pricing</li>
         </ul>
-      </div>
+      </motion.div>
 
       {/* Below is the fourth column */}
-      <div className="mb-5">
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7, delay: 0.7 }}
+        viewport={{ once: true }}
+        className="mb-5"
+      >
         <p className="font-bold text-lg text-gray-800 dark:text-white my-2">
           Resources
         </p>
@@ -72,11 +109,11 @@ const Footer = ({ theme }) => {
           <li>Design without borders</li>
           <li>Affliates</li>
         </ul>
-      </div>
+      </motion.div>
 
       {/* Below is the orange copyright arc at the bottom */}
       <FooterArc />
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,9 +1,16 @@
 import React from "react";
 import assets from "../assets/assets";
+import { motion } from "motion/react";
 
 const Hero = () => {
   return (
-    <div className="flex items-center justify-between gap-2 max-md:flex-col px-4 sm:px-12 lg:px-24 xl:px-40 py-10 mt-5 w-full">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.7 }}
+      viewport={{ once: true }}
+      className="flex items-center justify-between gap-2 max-md:flex-col px-4 sm:px-12 lg:px-24 xl:px-40 py-10 mt-5 w-full"
+    >
       {/* Below is the left hand side of the hero section */}
       <div className="space-y-6 flex-1">
         <h1 className="text-3xl text-gray-700 dark:text-white sm:text-4xl md:text-5xl font-semibold w-md max-sm:w-3/4">
@@ -28,7 +35,7 @@ const Hero = () => {
       <div className="mt-10 md:mt-0 flex-1">
         <img src={assets.hero_img} className="w-full" alt="Hero image" />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

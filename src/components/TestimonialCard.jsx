@@ -1,9 +1,16 @@
 import React from "react";
 import Ratings from "./Ratings";
+import { motion } from "motion/react";
 
 const TestimonialCard = ({ testimonial }) => {
   return (
-    <div className="w-100 max-sm:w-80 shrink-0 dark:bg-gray-950 px-6 pt-4 pb-12 rounded-2xl border border-gray-200 dark:border-gray-700 shadow hover:shadow-lg hover:scale-105 dark:shadow-gray-700/30 transition relative">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8, delay: 0.4 }}
+      viewport={{ once: true }}
+      className="w-100 max-sm:w-80 shrink-0 dark:bg-gray-950 px-6 pt-4 pb-12 rounded-2xl border border-gray-200 dark:border-gray-700 shadow hover:shadow-lg hover:scale-105 dark:shadow-gray-700/30 transition relative"
+    >
       <div className="flex items-center">
         <div className="py-5">
           <img
@@ -24,7 +31,7 @@ const TestimonialCard = ({ testimonial }) => {
         "{testimonial.remark}"
       </p>
       <Ratings rate={testimonial.rate} />
-    </div>
+    </motion.div>
   );
 };
 
