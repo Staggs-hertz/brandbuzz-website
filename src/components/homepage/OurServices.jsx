@@ -1,6 +1,7 @@
 import React from "react";
 import { servicesIcons } from "../../assets/assets";
 import ServiceCard from "./ServiceCard";
+import SectionHeader from "../SectionHeader";
 import { motion } from "motion/react";
 
 const OurServices = () => {
@@ -44,27 +45,16 @@ const OurServices = () => {
       className="px-4 sm:px-12 lg:px-24 xl:px-40 py-11"
     >
       {/* Below is the title of the services section */}
-      <div className="text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="font-bold text-3xl sm:text-4xl text-gray-700 dark:text-white"
-        >
-          We Provide The Best <span className="text-primary">Services</span>
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="mt-5 text-gray-500  dark:text-gray-300 mx-auto text-md max-sm:w-5/6 sm:w-3/4 lg:w-1/3 "
-        >
-          Let us unleash the full potential of your business with our
-          data-driven strategies
-        </motion.p>
-      </div>
+      <SectionHeader
+        title={
+          <>
+            We Provide The Best <span className="text-primary">Services</span>
+          </>
+        }
+        subtitle="Let us unleash the full potential of your business with our
+          data-driven strategies"
+        align="center"
+      />
 
       {/* Below is a map function to display the service cards */}
       <div className="flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-4 py-10 mt-6 gap-7">

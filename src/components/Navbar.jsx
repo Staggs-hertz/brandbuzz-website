@@ -3,6 +3,7 @@ import assets from "../assets/assets";
 import ThemeToggleBtn from "./ThemeToggleBtn";
 import { motion } from "motion/react";
 import { Link, NavLink } from "react-router-dom";
+import Button from "./Button";
 
 const Navbar = ({ theme, setTheme }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -56,7 +57,6 @@ const Navbar = ({ theme, setTheme }) => {
         {/* Below are the menus/links on the navbar */}
         <NavLink
           to="/"
-          href="#"
           className={`sm:hover:border-b ${(isActive) =>
             isActive && "text-primary"} `}
           onClick={() => setSidebarOpen(false)}
@@ -65,7 +65,6 @@ const Navbar = ({ theme, setTheme }) => {
         </NavLink>
         <NavLink
           to="/about-us"
-          href="#"
           className="sm:hover:border-b"
           onClick={() => setSidebarOpen(false)}
         >
@@ -73,7 +72,6 @@ const Navbar = ({ theme, setTheme }) => {
         </NavLink>
         <NavLink
           to="/services"
-          href="#"
           className="sm:hover:border-b"
           onClick={() => setSidebarOpen(false)}
         >
@@ -81,7 +79,6 @@ const Navbar = ({ theme, setTheme }) => {
         </NavLink>
         <NavLink
           to="/contact-us"
-          href="#"
           className="sm:hover:border-b"
           onClick={() => setSidebarOpen(false)}
         >
@@ -89,7 +86,6 @@ const Navbar = ({ theme, setTheme }) => {
         </NavLink>
         <NavLink
           to="/blog"
-          href="#"
           className="sm:hover:border-b"
           onClick={() => setSidebarOpen(false)}
         >
@@ -99,19 +95,9 @@ const Navbar = ({ theme, setTheme }) => {
 
       <div className="flex items-center gap-2 sm:gap-4">
         <ThemeToggleBtn theme={theme} setTheme={setTheme} />
-        <div className="flex gap-2">
-          <a
-            href="#"
-            className="text-white text-sm max-sm:hidden bg-primary py-3 px-6 max-md:px-3 max-md:text-[12px] rounded hover:scale-105 transition-all shadow-lg flex-wrap"
-          >
-            Sign Up
-          </a>
-          <a
-            href="#"
-            className="text-gray-700 text-sm max-sm:hidden bg-white py-3 px-6 max-md:px-3 max-md:text-[12px] rounded hover:scale-105 transition-all shadow-lg flex-wrap"
-          >
-            Log In
-          </a>
+        <div className="flex gap-2 max-sm:hidden">
+          <Button content="Sign Up" color="orange" />
+          <Button content="Log In" color="white" />
         </div>
 
         <img

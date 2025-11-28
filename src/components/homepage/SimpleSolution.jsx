@@ -2,8 +2,9 @@ import React from "react";
 import assets from "../../assets/assets";
 import SolutionItem from "./SolutionItem";
 import { motion } from "motion/react";
+import SectionHeader from "../SectionHeader";
 
-const SolutionSteps = () => {
+const SimpleSolution = () => {
   return (
     <div className="px-4 sm:px-12 lg:px-24 xl:px-40 flex justify-between items-center bg-orange-200/50 dark:bg-primary/20 max-md:flex-col">
       {/* Below is the left hand side of the section */}
@@ -20,15 +21,15 @@ const SolutionSteps = () => {
       {/* Below is the right hand side of the section */}
       <div className="py-5">
         <div className="pb-7">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="font-bold text-3xl sm:text-4xl text-gray-700 dark:text-white"
-          >
-            Simple <span className="text-primary">Solutions!</span>
-          </motion.h2>
+          <SectionHeader
+            title={
+              <>
+                Simple <span className="text-primary">Solutions!</span>
+              </>
+            }
+            align="left"
+          />
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -93,7 +94,7 @@ const SolutionSteps = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
             href="#"
-            className="bg-transparent dark:bg-white/80 text-primary border border-primary py-3 px-8 sm:px-11  rounded hover:scale-105 transition-all text-sd shadow-lg flex-wrap"
+            className="bg-transparent dark:bg-white/80 text-primary border border-primary py-3 px-8 sm:px-11 rounded hover:scale-105 transition-all text-sd shadow-lg flex-wrap"
           >
             Read More
           </motion.a>
@@ -103,4 +104,4 @@ const SolutionSteps = () => {
   );
 };
 
-export default SolutionSteps;
+export default SimpleSolution;
