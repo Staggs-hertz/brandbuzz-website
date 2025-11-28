@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import TestimonialCard from "./TestimonialCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 //lucide-react was installed to make use of the right and left navigation arrows
-import { testimonialData } from "../assets/assets";
+import { testimonialData } from "../../assets/assets";
 import { motion } from "motion/react";
 
 const Testimonials = () => {

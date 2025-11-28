@@ -1,5 +1,5 @@
 import React from "react";
-import { ratingIcons } from "../assets/assets";
+import { ratingIcons } from "../../assets/assets";
 import RatingItem from "./RatingItem";
 
 const Ratings = ({ rate }) => {

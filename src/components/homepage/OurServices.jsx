@@ -1,9 +1,9 @@
 import React from "react";
-import { servicesIcons } from "../assets/assets";
+import { servicesIcons } from "../../assets/assets";
 import ServiceCard from "./ServiceCard";
 import { motion } from "motion/react";
 
-const Services = () => {
+const OurServices = () => {
   const servicesData = [
     {
       title: "SEO / SEM",
@@ -76,4 +76,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default OurServices;

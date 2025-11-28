@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import assets from "../assets/assets";
 import ThemeToggleBtn from "./ThemeToggleBtn";
 import { motion } from "motion/react";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = ({ theme, setTheme }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -13,19 +14,20 @@ const Navbar = ({ theme, setTheme }) => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="flex justify-between items-center px-4 sm:px-12 lg:px-24 xl:px-40 py-4 sticky top-0 z-20 backdrop-blur-xl font-medium bg-white/50 dark:bg-gray-900/70"
     >
-      <a href="#">
+      <Link to="/">
         <img
           src={theme === "light" ? assets.logo : assets.logo_dark}
           className="w-32 sm:w-40"
           alt=""
         />
-      </a>
+      </Link>
 
       <div
         className={`text-gray-700 dark:text-white sm:text-sm flex gap-5 ${
           sidebarOpen ? "max-sm:w-60 max-sm:pl-3" : "max-sm:w-0 overflow-hidden"
         } max-sm:bg-primary max-sm:h-full max-sm:min-h-screen max-sm:fixed top-0 right-0 max-sm:flex-col max-sm:pt-20 max-sm:text-white transition-all text-center`}
       >
+        {/* Below is the set of auxiliary buttons on the sidebar */}
         <div className="flex gap-2 sm:hidden pl-2">
           <a
             href="#"
@@ -42,47 +44,57 @@ const Navbar = ({ theme, setTheme }) => {
             Log In
           </a>
         </div>
+
+        {/* Below is the close button that appears at the top of the sidebar */}
         <img
           src={assets.close_icon}
           className="absolute right-4 top-5 w-5 sm:hidden"
           onClick={() => setSidebarOpen(false)}
           alt=""
         />
-        <a
+
+        {/* Below are the menus/links on the navbar */}
+        <NavLink
+          to="/"
           href="#"
-          className="sm:hover:border-b text-primary"
+          className={`sm:hover:border-b ${(isActive) =>
+            isActive && "text-primary"} `}
           onClick={() => setSidebarOpen(false)}
         >
           Home
-        </a>
-        <a
+        </NavLink>
+        <NavLink
+          to="/about-us"
           href="#"
           className="sm:hover:border-b"
           onClick={() => setSidebarOpen(false)}
         >
           About Us
-        </a>
-        <a
+        </NavLink>
+        <NavLink
+          to="/services"
           href="#"
           className="sm:hover:border-b"
           onClick={() => setSidebarOpen(false)}
         >
           Services
-        </a>
-        <a
+        </NavLink>
+        <NavLink
+          to="/contact-us"
           href="#"
           className="sm:hover:border-b"
           onClick={() => setSidebarOpen(false)}
         >
           Contact Us
-        </a>
-        <a
+        </NavLink>
+        <NavLink
+          to="/blog"
           href="#"
           className="sm:hover:border-b"
           onClick={() => setSidebarOpen(false)}
         >
           Blog
-        </a>
+        </NavLink>
       </div>
 
       <div className="flex items-center gap-2 sm:gap-4">
