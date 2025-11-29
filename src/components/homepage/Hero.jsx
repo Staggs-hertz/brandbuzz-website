@@ -9,7 +9,7 @@ const Hero = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.7 }}
       viewport={{ once: true }}
-      className="flex items-center justify-between gap-2 max-md:flex-col px-4 sm:px-12 lg:px-24 xl:px-40 py-10 mt-5 w-full"
+      className="flex items-center justify-between gap-2 max-md:flex-col px-4 sm:px-12 lg:px-24 xl:px-40 py-10 my-8 w-full"
     >
       {/* Below is the left hand side of the hero section */}
       <div className="space-y-6 flex-1">
