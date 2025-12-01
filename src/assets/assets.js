@@ -18,6 +18,9 @@ import moon_icon from "./moon_icon.svg";
 import close_icon from "./close_icon.svg";
 import menu_icon from "./menu_icon.svg";
 import menu_icon_dark from "./menu_icon_dark.svg";
+import location_icon from "./location_icon.svg";
+import mail_icon from "./mail_icon.svg";
+import phone_icon from "./phone_icon.svg";
 
 export const servicesIcons = {
   megaphone_icon,
@@ -46,6 +49,9 @@ const assets = {
   menu_icon,
   menu_icon_dark,
   close_icon,
+  phone_icon,
+  location_icon,
+  mail_icon,
 };
 
 export const testimonialData = [
